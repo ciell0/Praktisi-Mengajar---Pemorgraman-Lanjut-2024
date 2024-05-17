@@ -6,7 +6,6 @@ public class rumahSakit {
         Queue<String> namaPasien = new ArrayDeque<>();
         Scanner input = new Scanner(System.in);
 
-        try {
             while (true) {
                 System.out.print("Silahkan tulis nama pasien: ");
                 String nama = input.nextLine();
@@ -37,12 +36,5 @@ public class rumahSakit {
                 System.out.println(next);
                 i++;
             }
-        } catch (IllegalArgumentException e) {
-            System.err.println("Terjadi kesalahan pada input user: " + e.getMessage());
-        } catch (Exception e) {
-            System.err.println("Terjadi kesalahan: " + e.getMessage());
-        } finally {
-            input.close();
-        }
     }
 }
